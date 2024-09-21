@@ -1,0 +1,11 @@
+.footer_wrapper {
+    width: calc(1440/1440*100%);
+    position: absolute;
+    bottom: 0;
+}
+
+.footer {
+    background-color: rgb(158, 158, 157);
+    padding: 24px 64px;
+
+}
