@@ -1,0 +1,9 @@
+.main {
+    padding-inline: 64px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 46px;
+}
+
