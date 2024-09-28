@@ -1,15 +1,23 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Footer from './components/Footer/Footer';
+import Home from './pages/Home/Home';
+import { routes } from './constants/routes';
 import Header from './components/Header/Header';
-import Main from './components/Main/Main';
+import Footer from './components/Footer/Footer';
+import AboutUs from './pages/About Us/AboutUs';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   return (
-   <div className='container'>
-   <Header/>
-   <Main/>
-   <Footer/>
-   </div>
+    <div className='container'>
+      <Header />
+      <Routes>
+        <Route path={routes.home} element={<Home />} />
+        <Route path={routes.aboutUs} element={<AboutUs />} />
+        <Route path={routes.contact} element={<Contact />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

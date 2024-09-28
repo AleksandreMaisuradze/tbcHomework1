@@ -9,3 +9,7 @@
     padding: 24px 64px;
 
 }
+
+.footer_li {
+    cursor: pointer;
+}

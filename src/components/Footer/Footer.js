@@ -6,10 +6,10 @@ export default function Footer() {
        <div className='footer_wrapper'>
          <footer className='footer'>
             <nav className='footer_nav'>
-                <ul className='footer_nav'>
-                    <li className='footer_nav'>Home</li>
-                    <li className='footer_nav'>About Us</li>
-                    <li className='footer_nav'>Contact</li>
+                <ul className='footer_ul'>
+                    <li className='footer_li'>Home</li>
+                    <li className='footer_li'>About Us</li>
+                    <li className='footer_li'>Contact</li>
                 </ul>
             </nav>
         </footer>

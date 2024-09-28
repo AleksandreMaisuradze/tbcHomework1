@@ -7,3 +7,7 @@
     display: flex;
     justify-content: space-around;
 }
+
+.header_li {
+    cursor: pointer;
+}
