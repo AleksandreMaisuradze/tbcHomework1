@@ -1,0 +1,15 @@
+table {
+    margin: 114px auto;
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid black;
+  }
+  
+  th {
+    background-color:darkgrey;
+    font-weight: bold;
+  }
+  
+  
