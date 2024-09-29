@@ -1,5 +1,5 @@
 .header {
-    background-color:rgb(158, 158, 157);
+    background-color: rgb(158, 158, 157);
     padding: 24px 64px;
 }
 
@@ -10,4 +10,25 @@
 
 .header_li {
     cursor: pointer;
+}
+
+.bonus {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 24px;
+    animation: change .7s infinite;
+}
+
+@keyframes change {
+    0% {
+        color: rgb(62, 62, 142)
+    }
+
+    50% {
+        color: rgb(163, 51, 51)
+    }
+
+    100% {
+        color: rgb(62, 62, 142)
+    }
 }

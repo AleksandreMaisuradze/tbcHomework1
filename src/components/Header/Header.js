@@ -14,6 +14,9 @@ export default function Header() {
     const clickHandler3 = () => {
         navigate(routes.contact)
     }
+    const clickHandler4 = () => {
+        navigate(routes.bonus)
+    }
     return (
         <header className='header'>
             <nav className='header_nav'>
@@ -21,6 +24,7 @@ export default function Header() {
                     <li className='header_li' onClick={clickHandler}>Home</li>
                     <li className='header_li' onClick={clickHandler2}>About Us</li>
                     <li className='header_li' onClick={clickHandler3}>Contact</li>
+                    <li className='bonus' onClick={clickHandler4}>Bonus</li>
                 </ul>
             </nav>
         </header>

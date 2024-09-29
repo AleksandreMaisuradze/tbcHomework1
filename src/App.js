@@ -6,6 +6,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import AboutUs from './pages/About Us/AboutUs';
 import Contact from './pages/Contact/Contact';
+import Bonus from './pages/Bonus/Bonus';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.aboutUs} element={<AboutUs />} />
         <Route path={routes.contact} element={<Contact />} />
+        <Route path={routes.bonus} element={<Bonus />} />
       </Routes>
       <Footer />
     </div>
