@@ -1,5 +1,5 @@
-import React from 'react'
-import './Bonus.css'
+import React from 'react';
+import './Bonus.css';
 
 export default function Bonus() {
   const obj = {
@@ -12,28 +12,26 @@ export default function Bonus() {
   };
 
   return (
-    <table>
+    <table className='table'>
       <thead>
         <tr>
-          <th>key</th>
-          <th>value</th>
-          <th>position</th>
+          <th className='th'>Key</th>
+          <th className='th'>Value</th>
+          <th className='th'>Position</th>
         </tr>
       </thead>
       <tbody>
-        {Object.keys(obj).reduce((rows, value, index) => {
-          console.log(value);
+        {Object.keys(obj).reduce((rows, key, index) => {
           return [
             ...rows,
             <tr key={index}>
-              <td>{value}</td>
-              <td>{obj[value]}</td>
-              <td>{index}</td>
+              <td className='td'>{key}</td>
+              <td className='td'>{obj[key]}</td>
+              <td className='td'>{index}</td>
             </tr>
           ];
         }, [])}
       </tbody>
     </table>
   );
-
 }
