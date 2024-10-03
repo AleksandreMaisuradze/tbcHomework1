@@ -1,0 +1,6 @@
+.blogPage {
+    display: flex;
+    gap: 24px;
+    margin-inline: 24px;
+    margin-top: 64px;
+}

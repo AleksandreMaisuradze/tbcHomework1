@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import AboutUs from './pages/About Us/AboutUs';
 import Contact from './pages/Contact/Contact';
 import Bonus from './pages/Bonus/Bonus';
+import Blog from './pages/Blog/Blog';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path={routes.aboutUs} element={<AboutUs />} />
         <Route path={routes.contact} element={<Contact />} />
         <Route path={routes.bonus} element={<Bonus />} />
+        <Route path={routes.blog} element={<Blog />} />
       </Routes>
       <Footer />
     </div>
