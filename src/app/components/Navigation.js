@@ -11,6 +11,9 @@ export default function Navigation() {
                         <Link href={routes.home}>Home</Link>
                     </li>
                     <li className="header_li">
+                        <Link href={routes.product}>Product</Link>
+                    </li>
+                    <li className="header_li">
                         <Link href={routes.blog}>Blog</Link>
                     </li>
                     <li className="header_li">

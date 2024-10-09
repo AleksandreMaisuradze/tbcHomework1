@@ -1,7 +1,5 @@
 .footer_wrapper {
     width: calc(1440/1440*100%);
-    position: absolute;
-    bottom: 0;
 }
 
 .footer {
