@@ -1,5 +1,6 @@
 import BlogCard from '../components/blogcard/blogcard'
 import './blog.css'
+import '../global.css'
 
 export default function Blog() {
     return (

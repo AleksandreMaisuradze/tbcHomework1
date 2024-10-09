@@ -1,4 +1,5 @@
 import './contact.css'
+import '../global.css'
 
 export default function Contact() {
     return (

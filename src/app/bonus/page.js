@@ -1,4 +1,5 @@
 import './bonus.css';
+import '../global.css'
 
 export default function Bonus() {
   const obj = {

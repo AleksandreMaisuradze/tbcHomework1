@@ -1,4 +1,5 @@
 import './aboutus.css'
+import '../global.css'
 
 export default function AboutUs() {
     return (

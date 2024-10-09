@@ -1,4 +1,5 @@
 import ProfileCard from '../components/profilecard/profilecard'
+import '../global.css'
 
 export default function Profile() {
     return (
