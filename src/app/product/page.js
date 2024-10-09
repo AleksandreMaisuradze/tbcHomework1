@@ -4,6 +4,7 @@ import '../global.css'
 import { fetchData } from '../components/constants/auth'
 import Productcard from '../components/productscard/productcard'
 import './product.css'
+import { BallTriangle } from 'react-loader-spinner'
 
 export default function Product() {
     const [data, setData] = useState([])
@@ -27,7 +28,20 @@ export default function Product() {
     }
 
     if (isLoading) {
-        <h1>Loading...</h1>
+        return (
+            <div className='spinner'>
+                <BallTriangle
+                    height={100}
+                    width={100}
+                    radius={5}
+                    color="grey"
+                    ariaLabel="ball-triangle-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                />
+            </div>
+        )
     }
 
     return (
