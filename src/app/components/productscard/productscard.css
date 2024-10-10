@@ -1,14 +1,14 @@
 .productCardDiv {
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 8px; /* Reduced padding */
-    margin: 8px; /* Reduced margin */
+    padding: 8px;
+    margin: 16px;
     text-align: center;
-    background-color: #fff;
+    background-color: #f6f6f6;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    max-width: 350px; /* Set a maximum width for smaller cards */
-    max-height: 350px;
+    width: 380px; 
+    height: 350px;
   }
   
   .productCardDiv:hover {
@@ -16,25 +16,31 @@
   }
   
   .productCardDiv h1 {
-    font-size: 1rem; /* Smaller font size */
+    font-size: 1rem; 
     margin: 0.5rem 0;
     color: #333;
   }
   
   .productCardDiv h3 {
-    font-size: 0.9rem; /* Smaller font size */
+    font-size: 0.9rem; 
     margin: 0.5rem 0;
     color: #666;
   }
   
   .productCardDiv p {
-    margin: 0.3rem 0; /* Reduced margin */
+    margin: 0.3rem 0; 
     color: #555;
   }
   
   .productCardDiv img {
-    max-width: 100%; /* Responsive image */
+    max-width: 100%; 
     height: 200px;
     border-radius: 4px;
+  }
+
+  .bottom_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
   

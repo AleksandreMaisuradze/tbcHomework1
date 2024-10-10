@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import '../global.css'
 import { fetchData } from '../components/constants/auth'
-import Productcard from '../components/productscard/productcard'
+import Productcard from '../components/productscard/productscard'
 import './product.css'
 import { BallTriangle } from 'react-loader-spinner'
 
