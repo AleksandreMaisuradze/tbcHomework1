@@ -1,27 +1,52 @@
-import BlogCard from '../components/blogcard/blogcard'
-import './blog.css'
+'use client'
+import React, { useEffect, useState } from 'react'
 import '../global.css'
+import { fetchData } from '../components/constants/auth'
+import './blog.css'
+import { BallTriangle } from 'react-loader-spinner'
+import PostsCard from '../components/postscard/postscard'
 
-export default function Blog() {
+export default function Product() {
+    const [data, setData] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
+    const [error, setError] = useState('')
+
+    useEffect(() => {
+        fetchData('https://dummyjson.com/posts')
+            .then((data) => {
+                setData(data.posts)
+            }).catch(err => {
+                setError(err.message)
+            }).finally(() => {
+                setIsLoading(false)
+            })
+    }, [])
+    if (error) {
+        return (
+            <h1>{error}</h1>
+        )
+    }
+
+    if (isLoading) {
+        return (
+            <div className='spinner'>
+                <BallTriangle
+                    height={100}
+                    width={100}
+                    radius={5}
+                    color="grey"
+                    ariaLabel="ball-triangle-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                />
+            </div>
+        )
+    }
+
     return (
-        <div className='blogPage'>
-            <BlogCard title='What Writers Should Know! Part Ten: Marketing' image={ <img src='/images/blog11.png'
-                alt='image'
-                width={120}
-                height={120}
-            />
-            }
-                text='Hi SEers! Denise here with What Write Should Know! Part ten explores my least favorite thing, marketing. Over twenty years ago, I...' />
-            <BlogCard title='Holding On' image={<img src='/images/blog22.png'
-                alt='image'
-                width={120}
-                height={120}
-            />} text='A heartbeat slowly fadingeyes filled with unsaid truthswarmth held in fragile handslove close yet slipping away time lingers in stillnesspain beneath the silencea gentle...' />
-            <BlogCard title='Better me' image={<img src='/images/blog33.png'
-                alt='image'
-                width={120}
-                height={120}
-            />} text='“There is only one corner of the universe you can be certain of improving, and that’s your own self.” – Aldous Huxley My priority to see...' />
+        <div className='productListDiv'>
+            {data.map((post) => <PostsCard key={post.id} post={post} />)}
         </div>
     )
 }
