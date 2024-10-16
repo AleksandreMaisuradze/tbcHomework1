@@ -5,16 +5,6 @@ import './blogdetailspage.css'
 import Link from "next/link";
 import { routes } from "../../components/constants/routes";
 
-export async function generateStaticParams() {
-    const response = await fetch('https://dummyjson.com/posts');
-    const data = await response.json();
-    if (!data.posts) {
-        return [];
-    }
-    return data.posts.map((post) => ({
-        id: post.id.toString(),
-    }));
-}
 
 const PostDetailsPage = async ({ params }) => {
     const { id } = params;

@@ -1,52 +1,35 @@
-'use client'
-import React, { useEffect, useState } from 'react'
 import '../global.css'
 import { fetchData } from '../components/constants/auth'
 import './blog.css'
-import { BallTriangle } from 'react-loader-spinner'
 import PostsCard from '../components/postscard/postscard'
+import NotFoundPage from '../notfound/notfound'
 
-export default function Product() {
-    const [data, setData] = useState([])
-    const [isLoading, setIsLoading] = useState(true)
-    const [error, setError] = useState('')
+export default async function Product() {
+    let dataPosts;
 
-    useEffect(() => {
-        fetchData('https://dummyjson.com/posts')
-            .then((data) => {
-                setData(data.posts)
-            }).catch(err => {
-                setError(err.message)
-            }).finally(() => {
-                setIsLoading(false)
-            })
-    }, [])
-    if (error) {
+    try {
+         dataPosts = await fetchData('https://dummyjson.com/posts')
+    } catch (error) {
+        return <NotFoundPage />
+    }
+
+    if (!dataPosts) {
         return (
-            <h1>{error}</h1>
+            <NotFoundPage />
         )
     }
 
-    if (isLoading) {
-        return (
-            <div className='spinner'>
-                <BallTriangle
-                    height={100}
-                    width={100}
-                    radius={5}
-                    color="grey"
-                    ariaLabel="ball-triangle-loading"
-                    wrapperStyle={{}}
-                    wrapperClass=""
-                    visible={true}
-                />
-            </div>
-        )
-    }
+
+
 
     return (
         <div className='productListDiv'>
-            {data.map((post) => <PostsCard key={post.id} post={post} />)}
+            {dataPosts.posts.length > 0 ? (
+                dataPosts.posts.map((post) => <PostsCard key={post.id} post={post} />)
+            ) : (
+                <p>No posts available.</p>
+            )}
         </div>
-    )
+    );
+
 }
